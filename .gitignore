@@ -1,0 +1,5 @@
+.idea
+static
+templates
+accuknox/application_logs.log
+db.sqlite3
