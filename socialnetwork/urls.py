@@ -12,7 +12,8 @@ router.register('friends', views.FriendsList, basename='friends')
 urlpatterns = [
     path('sign_up/', views.SignUp.as_view()),
     path('send_connection_request/', views.SendConnectionRequest.as_view()),
-    path('process_request/', views.ProcessRequest.as_view())
+    path('process_request/', views.ProcessRequest.as_view()),
+    path('login/', views.LoginView.as_view())
     # path('login/', LogIn.as_view()),
 ]
 urlpatterns += router.urls

@@ -1,3 +1,5 @@
+import base64
+
 from django.utils import timezone
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
@@ -28,6 +30,24 @@ class SignUp(APIView):
         customer = user_model.objects.create_user(**serializer.validated_data)
         resp_data = {'code': 100, 'msg': 'New User Created successfully', 'customer_id': customer.pk}
         return Response(status=status.HTTP_201_CREATED, data=resp_data)
+
+
+@method_decorator(CatchException, name='post')
+class LoginView(APIView):
+    authentication_classes = []
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        email = self.request.data.get('email')
+        raw_password = self.request.data.get('password')
+        try:
+            user_data = get_user_model().objects.get_by_natural_key(email)
+            if user_data.check_password(raw_password) and user_data.is_active:
+                return Response(data={'msg': f'Login Successful for Customer: {user_data}'}, status=status.HTTP_200_OK)
+            else:
+                return Response(data={'msg': 'Invalid Password mentioned'})
+        except get_user_model().DoesNotExist:
+            return Response(data={'msg': 'Invalid Email address mentioned'})
 
 
 @method_decorator(CatchException, name='list')
