@@ -1,0 +1,25 @@
+FROM python:3.8.5-slim
+
+RUN apt-get update && apt-get install -y nginx gcc telnet curl vim procps
+RUN mkdir -p "/opt/git/python"
+RUN mkdir "/applog"
+
+
+ENV     PYTHONDONTWRITEBYTECODE 1
+ENV     PYTHONUNBUFFERED 1
+
+WORKDIR /opt/git/python
+
+# copy Django project
+COPY . /opt/git/python
+
+# install python dependencies
+RUN   pip install --upgrade pip
+RUN   pip install -r /opt/git/python/requirements.txt
+
+
+RUN   chmod a+x /opt/git/python/run.sh
+
+EXPOSE  8010 8080
+
+CMD ["/bin/bash","/opt/git/python/run.sh"]

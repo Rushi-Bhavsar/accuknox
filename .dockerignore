@@ -1,0 +1,7 @@
+db.sqlite3
+accuknox/application_logs.log
+.gitignore
+.git
+*__pycache__/
+venv
+.idea
