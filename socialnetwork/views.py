@@ -76,7 +76,7 @@ class CustomerDetails(ReadOnlyModelViewSet):
             return Response(data=resp_data, status=status.HTTP_204_NO_CONTENT)
 
     def list(self, request, *args, **kwargs):
-        if not self.request.user.is_superuser or self.request.user.is_staff:
+        if not (self.request.user.is_superuser or self.request.user.is_staff):
             return Response({'Customer': [], 'msg': 'You are not authorized to make this request'},
                             status=status.HTTP_401_UNAUTHORIZED)
         msg = 'All user list'
