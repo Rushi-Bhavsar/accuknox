@@ -197,6 +197,7 @@ LOGGING = {
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'socialnetwork.utils.authentication_utils.CustomAuthentication',
         'socialnetwork.utils.authentication_utils.CustomBasicAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
