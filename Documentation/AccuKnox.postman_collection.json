@@ -1,0 +1,2579 @@
+{
+	"info": {
+		"_postman_id": "4e2b68cd-b57e-4ee0-8d19-c75772965194",
+		"name": "AccuKnox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16273385"
+	},
+	"item": [
+		{
+			"name": "CustomAuthentication",
+			"item": [
+				{
+					"name": "customer_retrieve Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "hasrshal@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/customer/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_connection_via_email Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/search_connection/?search_name=devesh.kulkarni@gmail.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"search_connection",
+								""
+							],
+							"query": [
+								{
+									"key": "search_name",
+									"value": "devesh.kulkarni@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_connection_via_first_name Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/search_connection/?search_name=a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"search_connection",
+								""
+							],
+							"query": [
+								{
+									"key": "search_name",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_search_connection Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/search_connection/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"search_connection",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send_connection_request Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "to_id",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/send_connection_request/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"send_connection_request",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "One Min Condition",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "rushi@gmail.com",
+										"type": "text"
+									},
+									{
+										"key": "password",
+										"value": "123456",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "to_id",
+											"value": "8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/send_connection_request/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"send_connection_request",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 17:06:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Can not send more than 3 new connection request within 1 min.\"\n}"
+						},
+						{
+							"name": "New Connection Request Sent",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "rushi@gmail.com",
+										"type": "text"
+									},
+									{
+										"key": "password",
+										"value": "123456",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "to_id",
+											"value": "9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/send_connection_request/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"send_connection_request",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 17:07:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Request Send from rushi@gmail.com to rahul.haral@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "accept_request Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "to_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "request_status",
+									"value": "accept",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/process_request/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"process_request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject_request Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "to_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "request_status",
+									"value": "reject",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/process_request/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"process_request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "connection_request_status_pending Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/connection_request_status/?status=pending",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"connection_request_status",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "pending"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "connection_request_status_reject Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/connection_request_status/?status=reject",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"connection_request_status",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "reject"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "friends Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "rushi@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/friends/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"friends",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BasicAuthentication",
+			"item": [
+				{
+					"name": "customer_retrieve",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/customer/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "customer_retrieve_profile_view",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/customer/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customer",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:31:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "166"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Customer\": {\n        \"id\": 1,\n        \"email\": \"rushi@gmail.com\",\n        \"username\": \"rushi_1006\",\n        \"first_name\": \"Rushikesh\",\n        \"last_name\": \"Bhavsar\",\n        \"is_active\": true\n    },\n    \"msg\": \"Customer Detail found.\"\n}"
+						},
+						{
+							"name": "customer_retrieve_profile_view_of_others_not_allowed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/customer/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customer",
+										"2"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:32:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Customer\": [],\n    \"msg\": \"You are not authorized to make this request\"\n}"
+						},
+						{
+							"name": "customer_retrieve_admin_user_profile_view",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/customer/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customer",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:35:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1410"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 100,\n    \"msg\": \"All user list\",\n    \"total_count\": 20,\n    \"page_count\": 10,\n    \"next\": \"http://127.0.0.1:8000/api/customer/?page=2\",\n    \"previous\": null,\n    \"result\": [\n        {\n            \"id\": 1,\n            \"email\": \"rushi@gmail.com\",\n            \"username\": \"rushi_1006\",\n            \"first_name\": \"Rushikesh\",\n            \"last_name\": \"Bhavsar\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 2,\n            \"email\": \"hasrshal@gmail.com\",\n            \"username\": \"harshal\",\n            \"first_name\": \"Harshal\",\n            \"last_name\": \"Wagh\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 3,\n            \"email\": \"vishal.patil@gmail.com\",\n            \"username\": \"vishal_patil\",\n            \"first_name\": \"Vishal\",\n            \"last_name\": \"Patil\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 4,\n            \"email\": \"vishal.dhande@gmail.com\",\n            \"username\": \"vishal_dhande\",\n            \"first_name\": \"Vishal\",\n            \"last_name\": \"dhande\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 5,\n            \"email\": \"mayur.kulkarni@gmail.com\",\n            \"username\": \"mayur_kulkarni\",\n            \"first_name\": \"Mayur\",\n            \"last_name\": \"Kulkarni\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 6,\n            \"email\": \"keval.thakkar@gmail.com\",\n            \"username\": \"keval_thakkar\",\n            \"first_name\": \"Keval\",\n            \"last_name\": \"Thakkar\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 7,\n            \"email\": \"devina.yadav@gmail.com\",\n            \"username\": \"devina_yadav\",\n            \"first_name\": \"Devina\",\n            \"last_name\": \"Yadav\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 8,\n            \"email\": \"ashwini.ghure@gmail.com\",\n            \"username\": \"ashwini_ghure\",\n            \"first_name\": \"Ashwini\",\n            \"last_name\": \"Ghure\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 9,\n            \"email\": \"rahul.haral@gmail.com\",\n            \"username\": \"rahul_haral\",\n            \"first_name\": \"Rahul\",\n            \"last_name\": \"Haral\",\n            \"is_active\": true\n        },\n        {\n            \"id\": 10,\n            \"email\": \"hasrh.jain@gmail.com\",\n            \"username\": \"harsh_jain\",\n            \"first_name\": \"Harsh\",\n            \"last_name\": \"Jain\",\n            \"is_active\": true\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "search_connection_via_email",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/search_connection/?search_name=devesh.kulkarni@gmail.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"search_connection",
+								""
+							],
+							"query": [
+								{
+									"key": "search_name",
+									"value": "devesh.kulkarni@gmail.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search_connection_via_email_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/search_connection/?search_name=devesh.kulkarni@gmail.com",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"search_connection",
+										""
+									],
+									"query": [
+										{
+											"key": "search_name",
+											"value": "devesh.kulkarni@gmail.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:36:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 100,\n    \"msg\": \"Search Details\",\n    \"total_count\": 1,\n    \"page_count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"result\": [\n        {\n            \"username\": \"devesh_kulkarni\",\n            \"pk\": 15\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "search_connection_via_first_name",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/search_connection/?search_name=a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"search_connection",
+								""
+							],
+							"query": [
+								{
+									"key": "search_name",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search_connection_via_first_name_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/search_connection/?search_name=a",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"search_connection",
+										""
+									],
+									"query": [
+										{
+											"key": "search_name",
+											"value": "a"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:37:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "521"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 100,\n    \"msg\": \"Search Details\",\n    \"total_count\": 15,\n    \"page_count\": 10,\n    \"next\": \"http://127.0.0.1:8000/api/search_connection/?page=2&search_name=a\",\n    \"previous\": null,\n    \"result\": [\n        {\n            \"username\": \"harshal\",\n            \"pk\": 2\n        },\n        {\n            \"username\": \"vishal_patil\",\n            \"pk\": 3\n        },\n        {\n            \"username\": \"vishal_dhande\",\n            \"pk\": 4\n        },\n        {\n            \"username\": \"mayur_kulkarni\",\n            \"pk\": 5\n        },\n        {\n            \"username\": \"keval_thakkar\",\n            \"pk\": 6\n        },\n        {\n            \"username\": \"devina_yadav\",\n            \"pk\": 7\n        },\n        {\n            \"username\": \"ashwini_ghure\",\n            \"pk\": 8\n        },\n        {\n            \"username\": \"rahul_haral\",\n            \"pk\": 9\n        },\n        {\n            \"username\": \"harsh_jain\",\n            \"pk\": 10\n        },\n        {\n            \"username\": \"mandar_bhavsar\",\n            \"pk\": 11\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "list_search_connection",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/search_connection/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"search_connection",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list_search_connection_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/search_connection/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"search_connection",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:37:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "507"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 100,\n    \"msg\": \"Search Details\",\n    \"total_count\": 18,\n    \"page_count\": 10,\n    \"next\": \"http://127.0.0.1:8000/api/search_connection/?page=2\",\n    \"previous\": null,\n    \"result\": [\n        {\n            \"username\": \"harshal\",\n            \"pk\": 2\n        },\n        {\n            \"username\": \"vishal_patil\",\n            \"pk\": 3\n        },\n        {\n            \"username\": \"vishal_dhande\",\n            \"pk\": 4\n        },\n        {\n            \"username\": \"mayur_kulkarni\",\n            \"pk\": 5\n        },\n        {\n            \"username\": \"keval_thakkar\",\n            \"pk\": 6\n        },\n        {\n            \"username\": \"devina_yadav\",\n            \"pk\": 7\n        },\n        {\n            \"username\": \"ashwini_ghure\",\n            \"pk\": 8\n        },\n        {\n            \"username\": \"rahul_haral\",\n            \"pk\": 9\n        },\n        {\n            \"username\": \"harsh_jain\",\n            \"pk\": 10\n        },\n        {\n            \"username\": \"mandar_bhavsar\",\n            \"pk\": 11\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "send_connection_request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "to_id",
+									"value": "15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/send_connection_request/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"send_connection_request",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "One Min Condition",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "rushi@gmail.com",
+										"type": "text"
+									},
+									{
+										"key": "password",
+										"value": "123456",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "to_id",
+											"value": "8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/send_connection_request/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"send_connection_request",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 17:06:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Can not send more than 3 new connection request within 1 min.\"\n}"
+						},
+						{
+							"name": "New Connection Request Sent",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "rushi@gmail.com",
+										"type": "text"
+									},
+									{
+										"key": "password",
+										"value": "123456",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "to_id",
+											"value": "9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/send_connection_request/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"send_connection_request",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 17:07:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Request Send from rushi@gmail.com to rahul.haral@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "accept_request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "to_id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "request_status",
+									"value": "accept",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/process_request/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"process_request",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "accept_request_success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "to_id",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "request_status",
+											"value": "accept",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/process_request/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"process_request",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:38:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Connection added.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "reject_request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "to_id",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "request_status",
+									"value": "reject",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/process_request/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"process_request",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "reject_request_success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "to_id",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "request_status",
+											"value": "reject",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/process_request/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"process_request",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:39:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Connection Rejected\"\n}"
+						}
+					]
+				},
+				{
+					"name": "connection_request_status_pending",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/connection_request_status/?status=pending",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"connection_request_status",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "pending"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "connection_request_status_pending_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/connection_request_status/?status=pending",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"connection_request_status",
+										""
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "pending"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:39:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "235"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 100,\n    \"msg\": \"Requested Details found.\",\n    \"total_count\": 3,\n    \"page_count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"result\": [\n        {\n            \"receiver_user\": 13,\n            \"status\": \"pending\"\n        },\n        {\n            \"receiver_user\": 14,\n            \"status\": \"pending\"\n        },\n        {\n            \"receiver_user\": 15,\n            \"status\": \"pending\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "connection_request_status_reject",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rushi@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/connection_request_status/?status=reject",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"connection_request_status",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "reject"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "connection_request_status_reject_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/connection_request_status/?status=reject",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"connection_request_status",
+										""
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "reject"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:39:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "230"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 100,\n    \"msg\": \"Requested Details found.\",\n    \"total_count\": 3,\n    \"page_count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"result\": [\n        {\n            \"receiver_user\": 6,\n            \"status\": \"reject\"\n        },\n        {\n            \"receiver_user\": 9,\n            \"status\": \"reject\"\n        },\n        {\n            \"receiver_user\": 12,\n            \"status\": \"reject\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "friends",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "Rushi@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/friends/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"friends",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "friends_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/friends/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"friends",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jul 2023 18:40:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "351"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 100,\n    \"msg\": \"Details found.\",\n    \"total_count\": 5,\n    \"page_count\": 5,\n    \"next\": null,\n    \"previous\": null,\n    \"result\": [\n        {\n            \"to_user\": 2,\n            \"customer_username\": \"harshal\"\n        },\n        {\n            \"to_user\": 3,\n            \"customer_username\": \"vishal_patil\"\n        },\n        {\n            \"to_user\": 4,\n            \"customer_username\": \"vishal_dhande\"\n        },\n        {\n            \"to_user\": 5,\n            \"customer_username\": \"mayur_kulkarni\"\n        },\n        {\n            \"to_user\": 11,\n            \"customer_username\": \"mandar_bhavsar\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "a@a.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "rushikesh@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "rushikesh1006",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Rushikesh",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Bhavsar",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/sign_up/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"sign_up",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SignUp_Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "a@a.com",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rushikesh@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "rushikesh1006",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Rushikesh",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Bhavsar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/sign_up/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"sign_up",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 18:28:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 100,\n    \"msg\": \"New User Created successfully\",\n    \"customer_id\": 20\n}"
+				},
+				{
+					"name": "SignUp_Missing_fields_error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "a@a.com",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rushikesh@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "rushikesh1006",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "Rushikesh",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Bhavsar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/sign_up/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"sign_up",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 18:29:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "115"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": [\n        \"This field is required.\"\n    ],\n    \"password\": [\n        \"This field is required.\"\n    ],\n    \"username\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "SignUp_Already_Record_present",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "a@a.com",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rushikesh@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "rushikesh1006",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Rushikesh",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Bhavsar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/sign_up/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"sign_up",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 18:29:36 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": [\n        \"my user with this email already exists.\"\n    ],\n    \"username\": [\n        \"my user with this username already exists.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "rushi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login_Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rushi@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 18:30:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Login Successful for Customer: rushi@gmail.com\"\n}"
+				},
+				{
+					"name": "Login_Invalid_Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rushi@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 18:30:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Invalid Password mentioned\"\n}"
+				},
+				{
+					"name": "Login_Invalid_Email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rushi@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 18:30:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Invalid Email address mentioned\"\n}"
+				}
+			]
+		}
+	]
+}
