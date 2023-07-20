@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+from django.utils import timezone
+Q = models.Q
 
 
 class CustomerUserManager(BaseUserManager):
@@ -44,21 +46,24 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
-class ConnectionRequest:
-    request = models.ForeignKey(to=MyUser, on_delete=models.CASCADE)
-    sender = models.ForeignKey(to=MyUser, on_delete=models.CASCADE)
+class ConnectionRequest(models.Model):
+    sender_user = models.ForeignKey(to=MyUser, on_delete=models.CASCADE, related_name='sender_user')
+    receiver_user = models.ForeignKey(to=MyUser, on_delete=models.CASCADE, related_name='receiver_user')
     status = models.CharField(max_length=20, default='pending')
-    request_time = models.DateTimeField(auto_now=True)
+    request_time = models.DateTimeField(auto_created=True)
 
     def __str__(self):
         return f'{self.pk}'
 
 
-class Connection:
-    customer_1 = models.ForeignKey(to=MyUser, on_delete=models.CASCADE)
-    customer_2 = models.ForeignKey(to=MyUser, on_delete=models.CASCADE)
-    request_date = models.DateField(auto_now=True)
+class Connection(models.Model):
+    from_user = models.ForeignKey(to=MyUser, on_delete=models.CASCADE, related_name='from_user')
+    to_user = models.ForeignKey(to=MyUser, on_delete=models.CASCADE, related_name='to_user')
+    connection_date = models.DateField(auto_now=True)
     description = models.TextField()
+
+    class Meta:
+        unique_together = ('from_user', 'to_user')
 
     def __str__(self):
         return f'{self.pk}'
