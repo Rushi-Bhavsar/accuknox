@@ -99,6 +99,9 @@ class SendConnectionRequest(APIView):
             return Response(data=serializer.errors, status=200)
         to_user = serializer.validated_data.get('to_id')
 
+        if from_user == to_user:
+            return Response(data={'msg': 'from_user and to_user can not be same.'})
+
         # User can not send more than three connection request within 60 seconds.
         connection_count = check_request_allowed(from_user)
         if connection_count >= 3:
@@ -135,6 +138,10 @@ class ProcessRequest(APIView):
             return Response(data=serializer.errors, status=200)
         request_status = serializer.validated_data.get('request_status')
         to_user = serializer.validated_data.get('to_id')
+
+        if from_user == to_user:
+            return Response(data={'msg': 'from_user and to_user can not be same.'})
+
         query_data = ConnectionRequest.objects.filter(sender_user=from_user, receiver_user=to_user, status='pending').first()
         if query_data:
             query_data.status = request_status
